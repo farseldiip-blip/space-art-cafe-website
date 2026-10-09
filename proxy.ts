@@ -1,0 +1,4 @@
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+export function proxy(request: NextRequest) { const { pathname } = request.nextUrl; if (pathname === '/') { const locale = request.cookies.get('locale')?.value === 'ar' ? 'ar' : 'en'; return NextResponse.redirect(new URL(`/${locale}`, request.url)) }; if (!pathname.startsWith('/en') && !pathname.startsWith('/ar') && !pathname.startsWith('/_next') && !pathname.includes('.')) return NextResponse.redirect(new URL(`/en${pathname}`, request.url)); const response = NextResponse.next(); const locale = pathname.startsWith('/ar') ? 'ar' : pathname.startsWith('/en') ? 'en' : null; if (locale) response.cookies.set('locale', locale, { path: '/', sameSite: 'lax' }); return response }
+export const config = { matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'] }
