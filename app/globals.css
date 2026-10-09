@@ -41,11 +41,14 @@ h1 { font-size:clamp(64px,9vw,138px); max-width:750px; }.hero h1 span { display:
 .site-preloader { position:fixed; inset:0; z-index:10000; display:grid; place-items:center; background:var(--yellow); color:var(--ink); font-family:'Instrument Sans',sans-serif; overflow:hidden; transform:translateY(0); }
 .site-preloader-logo { width:min(400px,76vw); height:auto; aspect-ratio:1/1; user-select:none; -webkit-user-drag:none; animation:site-preloader-logo-in 1s cubic-bezier(.22,1,.36,1) both; }
 @keyframes site-preloader-logo-in { from { opacity:0; transform:translateY(16px) scale(.965); } to { opacity:1; transform:translateY(0) scale(1); } }
-.site-preloader-logo.is-leaving { animation:site-preloader-logo-out .55s cubic-bezier(.5,0,.75,0) both; }
+.site-preloader-logo.is-leaving { animation:site-preloader-logo-out .7s cubic-bezier(.5,0,.75,0) both; }
 @keyframes site-preloader-logo-out { from { opacity:1; transform:translateY(0) scale(1); } to { opacity:0; transform:translateY(-26px) scale(.985); } }
-.site-preloader.is-revealing { transform:translateY(-100%); transition:transform var(--reveal-ms,1050ms) cubic-bezier(.76,0,.24,1); transition-delay:var(--reveal-delay,180ms); will-change:transform; }
+.site-preloader.is-revealing { transform:translateY(-100%); transition:transform var(--reveal-ms,1600ms) cubic-bezier(.76,0,.24,1); transition-delay:var(--reveal-delay,250ms); will-change:transform; }
 .site-preloader.is-revealing .site-preloader-logo { pointer-events:none; }
 .site-preloader.is-revealing .site-preloader-skip { opacity:0; pointer-events:none; }
+.site-reveal-hero .hero-copy { animation:site-hero-enter .8s cubic-bezier(.22,1,.36,1) .7s both; }
+.site-reveal-hero .hero-art { animation:site-hero-enter .8s cubic-bezier(.22,1,.36,1) .84s both; }
+@keyframes site-hero-enter { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
 .site-preloader-skip { position:absolute; bottom:max(26px, env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); padding:10px 22px; border:2px solid var(--ink); background:var(--cloud); border-radius:999px; font-size:13px; font-weight:600; opacity:.65; transition:opacity .2s; }
 .site-preloader-skip:hover { opacity:1; }
 .loader-lock { overflow:hidden; }

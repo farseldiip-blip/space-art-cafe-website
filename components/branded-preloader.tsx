@@ -8,11 +8,11 @@ type Locale = 'en' | 'ar'
 type Phase = 'enter' | 'reveal' | 'gone'
 
 const SESSION_KEY = 'space-art-preloader-seen-v2'
-const MIN_DISPLAY_MS = 1700
-const READY_CAP_MS = 2800
-const REVEAL_MS = 1050
+const MIN_DISPLAY_MS = 2600
+const READY_CAP_MS = 3000
+const REVEAL_MS = 1600
 const REVEAL_FAST_MS = 450
-const SAFETY_MS = 6000
+const SAFETY_MS = 8000
 
 export function BrandedPreloader({ pathname }: { pathname: string }) {
   const [phase, setPhase] = useState<Phase>('enter')
@@ -35,18 +35,23 @@ export function BrandedPreloader({ pathname }: { pathname: string }) {
       /* storage unavailable — overlay still unmounts */
     }
     document.documentElement.classList.remove('loader-lock')
+    document.documentElement.classList.remove('site-reveal-hero')
     phaseRef.current = 'gone'
     setPhase('gone')
   }
 
   function beginReveal(skip: boolean) {
     if (finishedRef.current || phaseRef.current !== 'enter') return
-    if (skip) setFast(true)
+    if (skip) {
+      setFast(true)
+    } else {
+      document.documentElement.classList.add('site-reveal-hero')
+    }
     phaseRef.current = 'reveal'
     setPhase('reveal')
     const fallback = window.setTimeout(
       () => finish(),
-      (skip ? REVEAL_FAST_MS : REVEAL_MS) + 450,
+      (skip ? REVEAL_FAST_MS : REVEAL_MS) + 500,
     )
     timers.current.push(fallback)
   }
@@ -106,6 +111,7 @@ export function BrandedPreloader({ pathname }: { pathname: string }) {
       timers.current.forEach((id) => window.clearTimeout(id))
       timers.current = []
       document.documentElement.classList.remove('loader-lock')
+      document.documentElement.classList.remove('site-reveal-hero')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
@@ -124,7 +130,7 @@ export function BrandedPreloader({ pathname }: { pathname: string }) {
     <div
       ref={overlayRef}
       className={`site-preloader${revealing ? ' is-revealing' : ''}`}
-      style={{ '--reveal-ms': `${revealMs}ms`, '--reveal-delay': fast ? '20ms' : '180ms' } as React.CSSProperties}
+      style={{ '--reveal-ms': `${revealMs}ms`, '--reveal-delay': fast ? '20ms' : '250ms' } as React.CSSProperties}
       role="status"
       aria-live="polite"
       aria-label={locale === 'ar' ? 'جاري تحميل سبيس آرت كافيه' : 'Loading Space Art Cafe'}
