@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -10 860 560" width="1290" height="840">
+  <defs>
+    <path id="cloud" d="M 30 372
+      C -15 300, 60 225, 157 208
+      C 150 120, 195 55, 255 62
+      C 300 66, 332 92, 340 120
+      C 350 60, 410 20, 475 30
+      C 535 38, 580 90, 570 155
+      C 600 105, 665 100, 705 135
+      C 760 185, 750 255, 698 298
+      C 740 285, 785 310, 770 370
+      C 760 420, 700 445, 640 455
+      C 590 450, 540 440, 510 415
+      C 505 470, 450 505, 380 498
+      C 320 490, 270 450, 260 405
+      C 235 440, 160 450, 110 430
+      C 55 410, 40 395, 30 372 Z"/>
+    <path id="handle" d="M 52 322 C 78 388, 160 412, 250 374"/>
+  </defs>
+  <rect x="-30" y="-10" width="860" height="560" fill="#FDD94E"/>
+  <!-- hard offset shadow -->
+  <use href="#cloud" transform="translate(14 18)" fill="#D8B93B" stroke="#D8B93B" stroke-width="26" stroke-linejoin="round"/>
+  <!-- white sticker edge + sky fill -->
+  <use href="#cloud" fill="#68BEEA" stroke="#FFFFFF" stroke-width="26" stroke-linejoin="round" paint-order="stroke"/>
+  <use href="#cloud" fill="#68BEEA"/>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#000000" letter-spacing="0.5">
+    <textPath href="#handle">@spaceartcafe</textPath>
+  </text>
+</svg>
