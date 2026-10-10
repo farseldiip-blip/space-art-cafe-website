@@ -1,3 +1,10 @@
+.menu-page .full-menu-grid { width:min(100%, 1200px); margin-inline:auto; display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; align-items:stretch; }
+.menu-page .full-menu-grid > .menu-card { width:100%; min-width:0; min-height:0; padding:10px; gap:10px; border-width:3px; box-shadow:4px 4px 0 var(--ink); }
+.menu-page .full-menu-grid .menu-card-image { aspect-ratio:1 / 1; border-width:3px; border-radius:12px 14px 10px 13px; }
+.menu-page .full-menu-grid .menu-card-copy { min-width:0; gap:6px; }
+.menu-page .full-menu-grid .menu-card-name { font-size:15px; line-height:1.15; }
+.menu-page .full-menu-grid .menu-card-description { font-size:12.5px; line-height:1.3; }
+.menu-page .full-menu-grid .menu-card-price { font-size:15px; }
 .menu-card-content { display:flex; flex-direction:column; gap:14px; min-height:0; }
 .menu-card-image { position:relative; width:100%; aspect-ratio:4 / 3; overflow:hidden; border:3px solid white; border-radius:16px 20px 14px 18px; background:var(--sky); flex:none; }
 .menu-card-image img { width:100%; height:100%; object-fit:cover; display:block; }
@@ -10,5 +17,20 @@
 .menu-card-description.clamp-3 { -webkit-line-clamp:3; }
 .menu-card-price { margin-top:auto; font-family:var(--font-display); font-size:24px; line-height:1; }
 .menu-card-unavailable { margin:0; color:var(--ink-muted); font-size:13px; }
+@media (min-width:640px) {
+  .menu-page .full-menu-grid { grid-template-columns:repeat(3, minmax(0, 1fr)); gap:20px; }
+  .menu-page .full-menu-grid > .menu-card { padding:14px; gap:12px; }
+  .menu-page .full-menu-grid .menu-card-image { aspect-ratio:4 / 3; }
+  .menu-page .full-menu-grid .menu-card-copy { gap:8px; }
+  .menu-page .full-menu-grid .menu-card-name { font-size:17px; }
+  .menu-page .full-menu-grid .menu-card-description { font-size:14px; }
+  .menu-page .full-menu-grid .menu-card-price { font-size:17px; }
+}
+@media (min-width:1024px) {
+  .menu-page .full-menu-grid { grid-template-columns:repeat(4, minmax(0, 1fr)); }
+}
+[dir="rtl"] .menu-page .full-menu-grid .menu-card-name,
+[dir="rtl"] .menu-page .full-menu-grid .menu-card-description,
+[dir="rtl"] .menu-page .full-menu-grid .menu-card-price { font-size:calc(100% + 1px); }
 .is-unavailable { opacity:.55; }
 @media (max-width:760px) { .menu-card-name { font-size:28px; } }

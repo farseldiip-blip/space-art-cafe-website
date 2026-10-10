@@ -26,6 +26,6 @@ export default function MenuBrowser({ locale, categories, items }: { locale: Loc
       <button type="button" role="tab" aria-selected={active === 'all'} className={active === 'all' ? 'chip active' : 'chip'} onClick={() => setActive('all')}>{locale === 'ar' ? 'الكل' : 'All'}</button>
       {categories.map((cat) => <button type="button" role="tab" aria-selected={active === cat.slug} key={cat.slug} className={active === cat.slug ? 'chip active' : 'chip'} onClick={() => setActive(cat.slug)}>{cat[`name_${locale}`]}</button>)}
     </div>
-    {filtered.length ? <div className="full-menu-grid">{filtered.map((item, index) => <MenuCard item={item} locale={locale} key={item.slug} priority={index === 0} descriptionLines={3} />)}</div> : <div className="empty-menu sticker">{locale === 'ar' ? 'ملقيناش حاجة بالاسم ده، جرّب كلمة تانية.' : 'Nothing found. Try another search.'}</div>}
+    {filtered.length ? <div className="full-menu-grid">{filtered.map((item, index) => <MenuCard item={item} locale={locale} key={item.slug} priority={index === 0} descriptionLines={2} />)}</div> : <div className="empty-menu sticker">{locale === 'ar' ? 'ملقيناش حاجة بالاسم ده، جرّب كلمة تانية.' : 'Nothing found. Try another search.'}</div>}
   </main>
 }
