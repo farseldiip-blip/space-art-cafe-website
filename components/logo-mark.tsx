@@ -37,7 +37,7 @@ export function LogoMark({
         fontSize="30"
         fontWeight="600"
         fill="#14264A"
-        fontFamily="Instrument Sans, ui-sans-serif, system-ui, sans-serif"
+        fontFamily="var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif"
       >
         <textPath href={`#${curveId}`}>{label}</textPath>
       </text>

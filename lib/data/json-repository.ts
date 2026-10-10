@@ -1,4 +1,6 @@
-import { categories, menu, photos, reviews, cafe } from '@/lib/cafe-data'
+import { categories, reviews, cafe } from '@/lib/cafe-data'
+import menu from '@/lib/menu.json'
+import photos from '@/lib/gallery.json'
 import settingsJson from '@/lib/settings.json'
 import type { Category, GalleryImage, MenuItem, MenuRepository, Review, SiteSettings } from './types'
 

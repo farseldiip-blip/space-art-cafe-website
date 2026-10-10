@@ -1,0 +1,9 @@
+[
+  {"name":"Hot Chocolate Mocha","nameAr":"هوت شوكليت موكا","category":"Hot coffee","price":120,"featured":true,"description":{"en":"Hot chocolate with espresso, finished with soft steamed milk foam.","ar":"شوكولاتة سخنة مع إسبريسو ورغوة حليب ناعمة."}},
+  {"name":"Hot White Chocolate Mocha","nameAr":"هوت وايت شوكليت موكا","category":"Chocolate & mocha","price":125,"featured":true,"description":{"en":"White chocolate melted into espresso with silky milk foam.","ar":"شوكولاتة بيضا مذابة في إسبريسو مع رغوة حليب حريرية."}},
+  {"name":"Cappuccino","nameAr":"كابتشينو","category":"Hot coffee","price":105,"featured":true,"description":{"en":"Classic espresso, steamed milk, and cloud-like foam.","ar":"إسبريسو كلاسيكي مع حليب مبخر ورغوة ناعمة."}},
+  {"name":"Iced Spanish Latte","nameAr":"آيس لاتيه إسباني","category":"Iced coffee","price":135,"placeholder":true,"description":{"en":"","ar":""}},
+  {"name":"Cloud Berry Fizz","nameAr":"كلاود بيري فِز","category":"Cold drinks","price":115,"placeholder":true,"description":{"en":"","ar":""}},
+  {"name":"Late Breakfast Plate","nameAr":"طبق فطار متأخر","category":"Breakfast","price":190,"placeholder":true,"description":{"en":"","ar":""}},
+  {"name":"Warm Cookie Skillet","nameAr":"كوكيز دافي","category":"Desserts","price":145,"placeholder":true,"description":{"en":"","ar":""}}
+]

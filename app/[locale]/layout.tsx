@@ -42,8 +42,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const typedLocale: Locale = locale
   const ar = typedLocale === 'ar'
   const fontStyle = {
-    '--font-display': ar ? 'var(--font-cairo), "Segoe UI", Tahoma, system-ui, sans-serif' : 'var(--font-hanken), system-ui, -apple-system, "Segoe UI", sans-serif',
-    '--font-body': ar ? 'var(--font-cairo), "Segoe UI", Tahoma, system-ui, sans-serif' : 'var(--font-hanken), system-ui, -apple-system, "Segoe UI", sans-serif',
+    '--font-display': ar ? 'var(--font-cairo), "Segoe UI", Tahoma, system-ui, sans-serif' : 'var(--font-plus-jakarta), system-ui, -apple-system, "Segoe UI", sans-serif',
+    '--font-body': ar ? 'var(--font-cairo), "Segoe UI", Tahoma, system-ui, sans-serif' : 'var(--font-plus-jakarta), system-ui, -apple-system, "Segoe UI", sans-serif',
     fontFamily: 'var(--font-body)',
   } as CSSProperties
   return <div lang={typedLocale} dir={ar ? 'rtl' : 'ltr'} style={fontStyle}><PreloaderEntry />{children}</div>
