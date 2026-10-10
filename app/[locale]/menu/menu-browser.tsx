@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import type { Category, MenuItem, Locale } from '@/lib/data'
+import { MenuCard } from '@/components/MenuCard'
 import { copy } from '@/lib/locale'
 
 export default function MenuBrowser({ locale, categories, items }: { locale: Locale; categories: Category[]; items: MenuItem[] }) {
@@ -25,6 +26,6 @@ export default function MenuBrowser({ locale, categories, items }: { locale: Loc
       <button type="button" role="tab" aria-selected={active === 'all'} className={active === 'all' ? 'chip active' : 'chip'} onClick={() => setActive('all')}>{locale === 'ar' ? 'الكل' : 'All'}</button>
       {categories.map((cat) => <button type="button" role="tab" aria-selected={active === cat.slug} key={cat.slug} className={active === cat.slug ? 'chip active' : 'chip'} onClick={() => setActive(cat.slug)}>{cat[`name_${locale}`]}</button>)}
     </div>
-    {filtered.length ? <div className="full-menu-grid">{filtered.map((item) => <article className="sticker menu-card" key={item.slug}><div><p className="menu-category">{item[`name_${locale}`]}</p><h2>{item[`name_${locale}`]}</h2>{item[`description_${locale}`] ? <p className="menu-desc">{item[`description_${locale}`]}</p> : null}<strong>{item.price} {locale === 'ar' ? 'ج.م' : 'EGP'}</strong></div></article>)}</div> : <div className="empty-menu sticker">{locale === 'ar' ? 'ملقيناش حاجة بالاسم ده، جرّب كلمة تانية.' : 'Nothing found. Try another search.'}</div>}
+    {filtered.length ? <div className="full-menu-grid">{filtered.map((item, index) => <MenuCard item={item} locale={locale} key={item.slug} priority={index === 0} descriptionLines={3} />)}</div> : <div className="empty-menu sticker">{locale === 'ar' ? 'ملقيناش حاجة بالاسم ده، جرّب كلمة تانية.' : 'Nothing found. Try another search.'}</div>}
   </main>
 }
