@@ -7,27 +7,58 @@ export const cafe = {
   whatsappHref: 'https://wa.me/201069613751',
   address: '4th floor, Wekalet Abu Raya St., above Mahmoud Specialized Hospital, Al Gamaa district, Awal Mansoura, Dakahlia.',
   addressAr: 'حي الجامعة، شارع وكالة أبو رية، أعلى مستشفى محمود التخصصي، الدور الرابع، أول المنصورة، الدقهلية',
-  hours: 'Open daily · closes at 1 AM',
+  hours: 'Open daily, closes at 1 AM',
   price: '200–1,000 EGP per person',
   instagram: 'https://instagram.com/spaceartcafe',
-  facebook: 'https://facebook.com/spaceartcafe',
   maps: 'https://www.google.com/maps/search/?api=1&query=29P5%2B84%20Awal%20Mansoura',
 }
 
 export const menu = [
-  { name: 'Hot Chocolate Mocha', category: 'Hot coffee', price: 120, featured: true },
-  { name: 'Hot White Chocolate Mocha', category: 'Chocolate & mocha', price: 125, featured: true },
-  { name: 'Cappuccino', category: 'Hot coffee', price: 105, featured: true },
-  { name: 'Iced Spanish Latte', category: 'Iced coffee', price: 135, placeholder: true },
-  { name: 'Cloud Berry Fizz', category: 'Cold drinks', price: 115, placeholder: true },
-  { name: 'Late Breakfast Plate', category: 'Breakfast', price: 190, placeholder: true },
-  { name: 'Warm Cookie Skillet', category: 'Desserts', price: 145, placeholder: true },
+  {
+    name: 'Hot Chocolate Mocha',
+    nameAr: 'هوت شوكليت موكا',
+    category: 'Hot coffee',
+    price: 120,
+    featured: true,
+    description: {
+      en: 'Hot chocolate with a shot of espresso, finished with steamed milk foam.',
+      ar: 'شوكولاتة سخنة مع شوت إسبريسو، وعلى الوش رغوة حليب ناعمة.',
+    },
+  },
+  {
+    name: 'Hot White Chocolate Mocha',
+    nameAr: 'هوت وايت شوكليت موكا',
+    category: 'Chocolate & mocha',
+    price: 125,
+    featured: true,
+    description: {
+      en: 'White chocolate melted into espresso, topped with silky milk foam.',
+      ar: 'شوكولاتة بيضا مذابة في إسبريسو مظبوط، متغطية برغوة حليب حريرية.',
+    },
+  },
+  {
+    name: 'Cappuccino',
+    nameAr: 'كابتشينو',
+    category: 'Hot coffee',
+    price: 105,
+    featured: true,
+    description: {
+      en: 'A classic espresso with steamed milk and a thick, cloud-like foam.',
+      ar: 'إسبريسو كلاسيكي مع حليب مبخّر ورغوة ناعمة كأنها سحابة.',
+    },
+  },
+  // TODO: Placeholder items below — names, prices, and descriptions are not confirmed yet.
+  // While they are placeholders, descriptions stay empty and are not rendered.
+  { name: 'Iced Spanish Latte', nameAr: 'آيس لاتيه إسباني', category: 'Iced coffee', price: 135, placeholder: true, description: { en: '', ar: '' } },
+  { name: 'Cloud Berry Fizz', nameAr: 'كلاود بيري فِز', category: 'Cold drinks', price: 115, placeholder: true, description: { en: '', ar: '' } },
+  { name: 'Late Breakfast Plate', nameAr: 'طبق فطار متأخر', category: 'Breakfast', price: 190, placeholder: true, description: { en: '', ar: '' } },
+  { name: 'Warm Cookie Skillet', nameAr: 'كوكيز دافي', category: 'Desserts', price: 145, placeholder: true, description: { en: '', ar: '' } },
 ]
 
 export const photos = [
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eBI4FB9C9pcv3XpLASZSoSoU673Wp9.png', alt: 'Warm wooden tables and chairs inside Space Art Cafe', className: 'photo-tall' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6jPosv8xQNmR0Ah1A8yKuL5DXBcrZB.png', alt: 'Open books illuminated by small lamps', className: 'photo-wide' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-rhzMg83cIkQqigmSCYTdsfs2AWSaDg.png', alt: 'Space Art Cafe cloud logo sticker', className: 'photo-logo' },
+  { src: '/images/gallery-1.jpg', alt_en: 'Warm wooden tables and chairs inside Space Art Cafe', alt_ar: 'ترابيز خشب من جوه سبيس آرت كافيه، حديدة ومدافية', className: 'photo-tall' },
+  { src: '/images/gallery-2.jpg', alt_en: 'Open books illuminated by small lamps', alt_ar: 'كتب مفتوحة بتتضوى بلمبات صغيرة', className: 'photo-wide' },
+  { src: '/images/gallery-3.jpg', alt_en: 'The coffee corner and shelves inside Space Art Cafe', alt_ar: 'ركن القهوة والرفارف من جوه سبيس آرت كافيه', className: 'photo-tall' },
 ]
 
 export const vibe = [
@@ -39,9 +70,9 @@ export const vibe = [
 ]
 
 export const reviews = [
-  '“A calm and comfortable atmosphere.”',
-  '“Great music, friendly staff, fair prices.”',
-  '“A lovely place to spend a quiet evening.”',
+  { en: '“A calm and comfortable atmosphere.”', ar: '“أجواء هادية ومريحة، دمها خفيف على القلب.”' },
+  { en: '“Great music, friendly staff, fair prices.”', ar: '“مزيكا حلوة، وستاف لطيف، وأسعار مناسبه.”' },
+  { en: '“A lovely place to spend a quiet evening.”', ar: '“مكان جميل نقضي فيه سهرة هادية.”' },
 ]
 
 export const categories = ['All', 'Hot coffee', 'Iced coffee', 'Chocolate & mocha', 'Cold drinks', 'Breakfast', 'Desserts']

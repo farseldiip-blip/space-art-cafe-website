@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import logo from '@/logo.jpg'
+import { LogoMark } from '@/components/logo-mark'
 import { copy } from '@/lib/locale'
 
 type Locale = 'en' | 'ar'
@@ -136,13 +136,10 @@ export function BrandedPreloader({ pathname }: { pathname: string }) {
       aria-label={locale === 'ar' ? 'جاري تحميل سبيس آرت كافيه' : 'Loading Space Art Cafe'}
       onTransitionEnd={onTransitionEnd}
     >
-      <img
+      <LogoMark
+        id="preloader-logo"
         className={`site-preloader-logo${revealing ? ' is-leaving' : ''}`}
-        src={logo.src}
-        width={logo.width}
-        height={logo.height}
-        alt="Space Art Cafe logo"
-        draggable={false}
+        ariaLabel={locale === 'ar' ? 'شعار سبيس آرت كافيه' : 'Space Art Cafe logo'}
       />
       <button ref={skipRef} className="site-preloader-skip" type="button" onClick={() => beginReveal(true)}>
         {t.skip}
