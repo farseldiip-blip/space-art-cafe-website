@@ -1,0 +1,10 @@
+[
+  {"_todo":"TODO: replace demo photos with the cafe's real photos","name":"Hot Chocolate Mocha","nameAr":"هوت شوكليت موكا","category":"Hot coffee","price":120,"featured":true,"image_path":"menu/hot-chocolate-mocha.jpg","description":{"en":"A cozy mocha for slow sips and an easy afternoon reset.","ar":"موكا دافية تخلي رشفاتك أهدى ومودك رايق طول اليوم."}},
+  {"name":"Hot White Chocolate Mocha","nameAr":"هوت وايت شوكليت موكا","category":"Chocolate & mocha","price":125,"featured":true,"image_path":"menu/hot-white-chocolate-mocha.jpg","description":{"en":"A smooth, mellow mocha made for a softer coffee mood.","ar":"موكا ناعمة ومزاجها هادي لعشاق القهوة الخفيفة والحلوة."}},
+  {"name":"Cappuccino","nameAr":"كابتشينو","category":"Hot coffee","price":105,"featured":true,"image_path":"menu/cappuccino.jpg","description":{"en":"A classic coffee pause with a rich, airy finish.","ar":"وقفة قهوة كلاسيكية برغوة غنية وإحساس خفيف على القلب."}},
+  {"name":"Iced Spanish Latte","nameAr":"آيس لاتيه إسباني","category":"Iced coffee","price":135,"image_path":"menu/iced-spanish-latte.jpg","description":{"en":"Cool, creamy coffee energy for bright days and late starts.","ar":"قهوة ساقعة وكريمي تخلي يومك أخف وبدايته ألطف."}},
+  {"name":"Cloud Berry Fizz","nameAr":"كلاود بيري فِز","category":"Cold drinks","price":115,"image_path":"menu/cloud-berry-fizz.jpg","description":{"en":"A bright berry drink with a playful, refreshing little lift.","ar":"مشروب بيري فريش بطعم منعش يظبط المود من أول رشفة."}},
+  {"name":"Late Breakfast Plate","nameAr":"طبق فطار متأخر","category":"Breakfast","price":190,"image_path":"menu/late-breakfast-plate.jpg","description":{"en":"A relaxed breakfast plate for mornings that begin on your time.","ar":"طبق فطار رايق للصباح اللي يبدأ براحتك ومن غير استعجال."}},
+  {"name":"Warm Cookie Skillet","nameAr":"كوكيز دافي","category":"Desserts","price":145,"image_path":"menu/warm-cookie-skillet.jpg","description":{"en":"A warm dessert moment made for sharing or keeping close.","ar":"حلو دافي للحظة حلوة، شاركه أو خليه كله ليك."}}
+]
+// TODO: replace demo photos with the cafe's real photos
